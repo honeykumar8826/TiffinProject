@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.Toolbar
+<androidx.appcompat.widget.Toolbar
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/customToolBar"
@@ -9,4 +9,4 @@
     app:contentInsetStartWithNavigation="0dp"
     app:titleTextColor="@color/white_color"
     app:titleTextAppearance="@style/ToolbarTitle">
-</android.support.v7.widget.Toolbar>
+</androidx.appcompat.widget.Toolbar>

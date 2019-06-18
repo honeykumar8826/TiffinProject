@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     TextInputEditText etPhone;
     RelativeLayout relativeLayout;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,9 +45,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 else
                 {
-                    Snackbar.make(relativeLayout,phoneNumber,2000).show();
-                   /* Intent intent = new Intent(this,VerifyOtp.class);
-                    startActivity(intent);*/
+                   // Snackbar.make(relativeLayout,phoneNumber,2000).show();
+                    Intent intent = new Intent(this,VerifyOtp.class);
+                    startActivity(intent);
 
                 }
                 break;

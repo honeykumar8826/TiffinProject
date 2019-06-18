@@ -9,4 +9,6 @@
     <dimen name="spacing_15">15dp</dimen>
     <dimen name="spacing_35">35dp</dimen>
     <dimen name="spacing_16">16dp</dimen>
+    <dimen name="size_32">32sp</dimen>
+    <dimen name="size_16">16sp</dimen>
 </resources>

@@ -24,4 +24,5 @@
     <string name="continu">CONTINUE</string>
     <string name="no_other_time">NO, OTHER TIME</string>
     <string name="please_enter_your_mobile_number_to_receive_a_verification_code">Please enter your mobile number to receive a verification code.</string>
+    <string name="verify">Verify</string>
 </resources>
