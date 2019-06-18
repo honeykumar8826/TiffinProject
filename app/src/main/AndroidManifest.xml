@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.tiffinsystem">
-
+<uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -21,22 +21,23 @@
         </activity>
         <activity
             android:name=".NavigationActivity"
-            android:label="@string/title_activity_navigation"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:label="Home"
+            android:theme="@style/NoActionBarTheme"
+            >
 
-            <intent-filter>
+           <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter>-->
         </activity>
         <activity
             android:name=".MainActivity"
             android:theme="@style/PhoneTheme">
-         <!--   <intent-filter>
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
+            </intent-filter>
         </activity>
     </application>
 
