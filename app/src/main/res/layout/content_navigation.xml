@@ -11,8 +11,33 @@
     <FrameLayout
         android:id="@+id/fl_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tabLayout">
 
     </FrameLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager_restaurant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tabLayout"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey_3"
+        android:layout_below="@+id/viewpager_restaurant"
+        />
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        app:tabIndicator="@color/colorPrimaryDark"
+        app:tabSelectedTextColor="#DD2C00"
+        app:tabTextAppearance="@style/MineCustomTabText"
+        app:tabTextColor="@color/gray_800"
+        app:tabRippleColor="#DD2C00"
+        app:tabMode="fixed"/>
+
+
 
 </RelativeLayout>

@@ -32,5 +32,8 @@
         <!--<item name="android:fitsSystemWindows">true</item>-->
 
     </style>
+    <style name="MineCustomTabText" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:textSize">10sp</item>
+    </style>
 
 </resources>
