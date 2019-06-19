@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_restaurant"
+        android:icon="@drawable/restaurant"
+        android:title="Restaurant" />
+    <item
+        android:id="@+id/menu_tiffin"
+        android:icon="@drawable/restaurant"
+        android:title="Tiffin" />
+    <item
+        android:id="@+id/menu_search"
+        android:icon="@drawable/ic_search"
+        android:title="Search" />
+    <item
+        android:id="@+id/menu_cart"
+        android:icon="@drawable/ic_shopping_cart"
+        android:title="Cart" />
+
+</menu>
