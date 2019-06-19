@@ -13,7 +13,8 @@
         android:windowSoftInputMode="adjustResize"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".VerifyOtp"
-            android:theme="@style/VerifyOtp">
+            android:theme="@style/VerifyOtp"
+            android:screenOrientation="portrait">
          <!--   <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -23,16 +24,18 @@
             android:name=".NavigationActivity"
             android:label="Home"
             android:theme="@style/NoActionBarTheme"
+            android:screenOrientation="portrait"
             >
-
-           <!-- <intent-filter>
+<!--
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>-->
         </activity>
         <activity
             android:name=".MainActivity"
-            android:theme="@style/PhoneTheme">
+            android:theme="@style/PhoneTheme"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

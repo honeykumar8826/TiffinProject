@@ -84,6 +84,13 @@
             android:textColor="@android:color/white"
             android:layout_marginTop="@dimen/spacing_16"/>
 
+        <ProgressBar
+            android:id="@+id/pg_mobile_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/spacing_16"/>
+
     </LinearLayout>
 
 

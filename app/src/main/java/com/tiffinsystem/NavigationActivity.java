@@ -61,7 +61,7 @@ public class NavigationActivity extends AppCompatActivity
     NavigationView navigationView;
     FrameLayout frameLayout;
     Fragment fragment;
-    private static final String API_KEY = "9e5ef71432c64196a16273c85cfb94c1";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -158,58 +158,5 @@ public class NavigationActivity extends AppCompatActivity
         return true;
     }
 
-    private void CallBannerApi() {
-        recyclerBanner.setLayoutManager(new LinearLayoutManager(this, LinearLayout.HORIZONTAL, false));
-        api = retrofit.create(NetworkClient.class);
-        Call<ResponseBody> call = api.getNews("in", API_KEY);
-        call.enqueue(new Callback<ResponseBody>() {
-            @Override
-            public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-                // Log.i(TAG, "onResponse: " + response.body());
-                try {
-                    String result = response.body().string();
-                    if (result != null) {
-                        JSONObject jsonObject = new JSONObject(result);
-                        String status = jsonObject.getString("status");
-                        int totalItem = jsonObject.getInt("totalResults");
-                        if (status.equals("ok") && totalItem > 0) {
-                            JSONArray jsonArray = jsonObject.getJSONArray("articles");
-                            if (jsonArray.length() > 0) {
-                                List<BannerImgModal> imageModalList = new ArrayList<>();
-                                for (int i = 0; i < jsonArray.length(); i++) {
 
-                                    JSONObject jsonArticle = jsonArray.getJSONObject(i);
-                                    String imgUrl = jsonArticle.getString("urlToImage");
-                                    BannerImgModal imageModal = new BannerImgModal(imgUrl);
-//                                Log.i(TAG, "values inside the for loop: " + authorName + "title" + title + "imgUrl" + imgUrl);
-                                    imageModalList.add(imageModal);
-                                }
-                                BannerImgAdapter imageLoadAdapter = new BannerImgAdapter(NavigationActivity.this, imageModalList);
-                                recyclerBanner.setAdapter(imageLoadAdapter);
-                                imageLoadAdapter.notifyDataSetChanged();
-                            } else {
-                                Toast.makeText(NavigationActivity.this, "No Data Available", Toast.LENGTH_SHORT).show();
-                            }
-                        } else {
-
-                            Toast.makeText(NavigationActivity.this, "Bad Request", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                } catch (IOException e) {
-                    e.printStackTrace();
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
-
-            @Override
-            public void onFailure(Call<ResponseBody> call, Throwable t) {
-                if (t instanceof IOException) {
-                    Toast.makeText(NavigationActivity.this, "Internet Issue", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(NavigationActivity.this, "Big Issue", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-    }
 }
