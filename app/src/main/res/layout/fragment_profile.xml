@@ -29,6 +29,7 @@
                     android:src="@drawable/ic_person"
                    />
                 <ImageView
+                    android:id="@+id/img_edit_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
@@ -68,6 +69,7 @@
                     android:src="@drawable/ic_email"
                     />
                 <ImageView
+                    android:id="@+id/img_edit_email"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
